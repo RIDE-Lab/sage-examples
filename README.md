@@ -19,6 +19,13 @@ Production-ready application examples for the SAGE framework.
 > [SAGE/tutorials](https://github.com/intellistream/SAGE/tree/main/tutorials) for learning
 > materials.
 
+## ICPP Demo: Docker web UI
+
+Run the published Demo image on your own computer without access to the server
+network. The [Docker startup guide](deploy/icpp-demo/README.md) includes
+Windows PowerShell and Linux/macOS scripts, Docker Hub and offline archive
+workflows, optional model configuration, persistence, and tested platform limits.
+
 ## 🚀 Quick Start
 
 ```bash
