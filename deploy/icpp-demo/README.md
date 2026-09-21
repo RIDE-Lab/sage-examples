@@ -44,6 +44,20 @@ docker compose -p sage-icpp-demo-hub -f compose.hub.yaml down
 
 ## 演示与模型配置
 
+四个启动脚本都会在 `.env` 不存在时从 `.env.example` 自动创建，已有文件保持不变。默认端点为空，机房 LLM/reranker 地址以注释示例提供；没有已验证的 embedding 服务默认值。
+
+如果想先编辑配置再启动，可只创建文件：
+
+```sh
+sh scripts/start-hub.sh --init-env
+```
+
+```powershell
+.\scripts\start-hub.ps1 -InitEnvOnly
+```
+
+然后编辑 `.env` 并正常运行启动脚本。离线脚本也支持同样选项，但离线 Compose 始终禁用模型端点。
+
 Ticket Triage、Supply Chain Alert 的规则流程和 Data Cleaner 不依赖模型服务，执行真实数据处理。可选自然语言解释需要配置可达的 LLM，默认显示未配置。
 
 详见 [Docker Hub 使用与模型配置](HUB-DEMO.md)。可以在此目录创建 `.env`，设置 `SAGE_LLM_BASE_URL`、`SAGE_LLM_MODEL`、`SAGE_OPENAI_API_KEY`，再执行 `up` 重建容器。Embedding 和 reranker 使用独立端点；不要将 reranker 配为 embedding。不要提交含密钥的 `.env`。

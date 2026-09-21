@@ -27,7 +27,7 @@ docker compose -p sage-icpp-demo-hub -f compose.hub.yaml up -d --pull never --no
 
 镜像已下载后，直接执行第二条命令即可离线启动。停止使用 `docker compose -p sage-icpp-demo-hub -f compose.hub.yaml down`，不加 `-v`，数据会保留。
 
-默认无需模型，可运行 Ticket Triage、Supply Chain Alert 规则流程和 Data Cleaner。可选 LLM 解释需设置可达的模型服务。在 compose.hub.yaml 同目录新建 `.env`，按实际服务填写：
+默认无需模型，可运行 Ticket Triage、Supply Chain Alert 规则流程和 Data Cleaner。启动脚本自动从 `.env.example` 创建缺失的 `.env`，不会覆盖已有配置。可先运行 `sh scripts/start-hub.sh --init-env`（PowerShell：`.\scripts\start-hub.ps1 -InitEnvOnly`）只创建文件。可选 LLM 解释需设置可达的模型服务，编辑该 `.env`，按实际服务填写：
 
 ```dotenv
 SAGE_LLM_BASE_URL=https://your-model-service/v1
