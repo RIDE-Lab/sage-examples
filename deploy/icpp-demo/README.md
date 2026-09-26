@@ -1,12 +1,14 @@
 # SAGE ICPP Demo — CPU 完整依赖版
 
+> **入口已迁移到 SAGE 主仓库的 icpp-demo 分支。** 请使用 [SAGE 启动脚本与说明](https://github.com/RIDE-Lab/SAGE/tree/icpp-demo/tools/icpp-demo)。本目录保留为历史兼容入口，后续更新以 SAGE 仓库为准。海报和二维码也指向 SAGE 分支。
+
 公开镜像：`liujun4hust/sage-icpp-demo:20260926-cpu-full`，Linux AMD64。Hub 压缩下载约 649 MiB，未压缩约 1.79 GiB。镜像包含 SAGE、OPC、前后端和 CPU 应用依赖，不包含 CUDA、模型权重、用户数据或凭据。
 
 ## 拉取并启动
 
 ```sh
-git clone --branch icpp-demo --single-branch https://github.com/RIDE-Lab/sage-examples.git
-cd sage-examples/deploy/icpp-demo
+git clone --branch icpp-demo --single-branch https://github.com/RIDE-Lab/SAGE.git
+cd SAGE/tools/icpp-demo
 sh scripts/start-hub.sh
 ```
 
