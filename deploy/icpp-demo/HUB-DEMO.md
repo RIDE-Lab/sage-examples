@@ -1,6 +1,6 @@
 # 从 Docker Hub 启动 SAGE Demo
 
-仓库：`liujun4hust/sage-icpp-demo`，版本：`20260921`，平台：Linux AMD64。
+仓库：`liujun4hust/sage-icpp-demo`，版本：`20260926-cpu-full`，平台：Linux AMD64。
 
 安装并启动支持 Linux 容器的 Docker（包含 Compose），解压启动包后：
 

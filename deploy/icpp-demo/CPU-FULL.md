@@ -38,6 +38,6 @@ powershell -ExecutionPolicy Bypass -File scripts/start-local.ps1
 
 先校验 SHA256SUMS，再运行脚本。核心演示顺序：Launch Ticket Triage API → Run Demo Flow → 查看结果和 metrics；Supply Chain Alert API 同样操作；Data Cleaner 使用 Test Data 默认输入启动并检查结果文件。
 
-本包暂未发布新 Docker Hub 标签。使用离线镜像归档，发布状态需以实际仓库校验结果为准。
+已发布 Docker Hub 标签 `liujun4hust/sage-icpp-demo:20260926-cpu-full`。运行 `sh scripts/start-hub.sh` 可拉取启动；Windows 对应 `scripts/start-hub.ps1`。离线归档仍可使用。
 
 CPU 版启动文件在 [cpu-full/](cpu-full/)。请先将离线镜像归档放入该目录的 artifacts/ 后执行脚本；仓库不包含大体积镜像。

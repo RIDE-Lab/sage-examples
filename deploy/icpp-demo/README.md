@@ -1,8 +1,8 @@
-> 2026-09-26 更新：修复版已构建并提供离线镜像包，使用 start-local 脚本启动。Docker Hub 新标签尚未发布（服务器连接 registry-1.docker.io 超时），Hub 脚本暂保持已发布的 20260921，不能将旧 Hub 镜像当作修复版。详见 [修复说明](RELEASE-NOTES.md)。
+> CPU 完整依赖版已于 2026-09-26 从服务器经 SOCKS 代理发布并核验。84 个锁定 Python 包，342 个应用模块导入通过；模型权重、CUDA、外部数据和凭据另行配置。详见 [CPU 版说明](CPU-FULL.md)。
 
 # SAGE ICPP Demo — Docker 启动入口
 
-公开镜像：[liujun4hust/sage-icpp-demo:20260921](https://hub.docker.com/r/liujun4hust/sage-icpp-demo/tags?name=20260921)。
+公开镜像：[liujun4hust/sage-icpp-demo:20260926-cpu-full](https://hub.docker.com/r/liujun4hust/sage-icpp-demo/tags?name=20260926-cpu-full)。
 
 安装并启动支持 **Linux 容器**的 Docker（包含 Compose）。镜像为 Linux AMD64；Windows、macOS 和 ARM64 本地运行尚未实机验证。
 
@@ -66,7 +66,7 @@ Ticket Triage、Supply Chain Alert 的规则流程和 Data Cleaner 不依赖模�
 
 ## 完全离线分发
 
-若用户无法访问 Docker Hub，可另行提供已导出的镜像归档；Git 仓库不存储镜像大文件。将归档放到本目录的 `artifacts/sage-icpp-demo-20260921.tar` 后，运行 `scripts/start-local.sh` 或 `scripts/start-local.ps1`。
+若用户无法访问 Docker Hub，可另行提供已导出的镜像归档；Git 仓库不存储镜像大文件。将归档放到本目录的 `artifacts/sage-icpp-demo-20260926-cpu-full.tar` 后，运行 `scripts/start-local.sh` 或 `scripts/start-local.ps1`。
 
 详见 [离线使用说明](LOCAL-DEMO.md)。本地归档配置与 Hub 配置使用不同 Compose 项目及数据卷；从一种方式切换到另一种方式前先停止旧容器，以免端口冲突。
 
