@@ -6,7 +6,7 @@ if (-not (Test-Path -LiteralPath '.env')) {
     Write-Host 'Created .env from .env.example; offline archive mode keeps models disabled.'
 }
 if ($InitEnvOnly) { return }
-docker load -i artifacts/sage-icpp-demo-20260921.tar
+docker load -i artifacts/sage-icpp-demo-20260926.tar
 if ($LASTEXITCODE -ne 0) { throw 'Docker image import failed.' }
 docker compose -p sage-icpp-demo-local -f compose.local.yaml up -d --pull never --no-build --wait
 if ($LASTEXITCODE -ne 0) { throw 'Demo startup failed.' }

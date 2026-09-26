@@ -1,3 +1,5 @@
+> 2026-09-26 更新：修复版已构建并提供离线镜像包，使用 start-local 脚本启动。Docker Hub 新标签尚未发布（服务器连接 registry-1.docker.io 超时），Hub 脚本暂保持已发布的 20260921，不能将旧 Hub 镜像当作修复版。详见 [修复说明](RELEASE-NOTES.md)。
+
 # SAGE ICPP Demo — Docker 启动入口
 
 公开镜像：[liujun4hust/sage-icpp-demo:20260921](https://hub.docker.com/r/liujun4hust/sage-icpp-demo/tags?name=20260921)。

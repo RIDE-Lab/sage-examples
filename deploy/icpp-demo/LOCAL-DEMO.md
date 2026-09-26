@@ -6,7 +6,7 @@
 
 ## 最短操作
 
-解压 `sage-icpp-demo-local-20260921.zip`，进入解压目录。
+解压 `sage-icpp-demo-local-20260926.zip`，进入解压目录。
 
 Windows PowerShell：
 
@@ -25,7 +25,7 @@ sh scripts/start-local.sh
 也可直接执行以下两条命令（PowerShell 和 shell 相同，无需执行脚本）：
 
 ```text
-docker load -i artifacts/sage-icpp-demo-20260921.tar
+docker load -i artifacts/sage-icpp-demo-20260926.tar
 docker compose -p sage-icpp-demo-local -f compose.local.yaml up -d --pull never --no-build --wait
 ```
 
@@ -54,6 +54,6 @@ docker compose -p sage-icpp-demo-local -f compose.local.yaml up -d --pull never 
 
 镜像归档 SHA256：`66042fda1ed39a007a9ffafbf515c8b90f23424b15ea41947c51977f74382463`。
 
-PowerShell：`Get-FileHash artifacts/sage-icpp-demo-20260921.tar -Algorithm SHA256`；Linux：`sha256sum -c artifacts/SHA256SUMS`；macOS：`shasum -a 256 -c artifacts/SHA256SUMS`。从解压根目录执行。
+PowerShell：`Get-FileHash artifacts/sage-icpp-demo-20260926.tar -Algorithm SHA256`；Linux：`sha256sum -c artifacts/SHA256SUMS`；macOS：`shasum -a 256 -c artifacts/SHA256SUMS`。从解压根目录执行。
 
 已用相同镜像在 Docker `--network none` 下验证健康、资源、应用发现和上述三个应用；无模型环境变量、全新数据卷、无源码挂载。模型服务器连接得到 Network is unreachable，规则演示仍成功。该测试证明无需外部服务；正常用户配置采用普通 Docker 网络以便浏览器访问本机映射端口，并非网络防火墙隔离方案。

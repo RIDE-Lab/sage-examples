@@ -6,7 +6,7 @@ if [ ! -e .env ]; then
     echo "Created .env from .env.example; offline archive mode keeps models disabled."
 fi
 if [ "${1:-}" = "--init-env" ]; then exit 0; fi
-docker load -i artifacts/sage-icpp-demo-20260921.tar
+docker load -i artifacts/sage-icpp-demo-20260926.tar
 docker compose -p sage-icpp-demo-local -f compose.local.yaml up -d --pull never --no-build --wait
 address=$(docker compose -p sage-icpp-demo-local -f compose.local.yaml port demo 18400)
 echo "Open http://$address/ui/"

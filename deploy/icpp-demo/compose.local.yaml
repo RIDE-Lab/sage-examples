@@ -1,6 +1,6 @@
 services:
   demo:
-    image: sage-icpp-demo:20260921
+    image: sage-icpp-demo:20260926
     pull_policy: never
     init: true
     ports:
